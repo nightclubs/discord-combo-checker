@@ -84,7 +84,7 @@ def __check__email():
         json=payload
    )
    if 'captcha-required' in res.text:
-    print('{}>> {} :: Unregistered :: Discord Email Checker'.format(Fore.RED, email)); open('discord_unreg.txt', 'a').write(f'{email}\n')
+     print('{}>> {} :: Unregistered :: Discord Email Checker'.format(Fore.RED, email)); open('discord_unreg.txt', 'a').write(f'{email}\n')
    if res.status_code == 20:
      print('{}>> {} :: Registered :: Discord Email Checker'.format(Fore.GREEN, email)); open('discord_reg.txt', 'a').write(f'{email}\n')
 
