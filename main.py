@@ -14,7 +14,7 @@ def __get__fingerprint():
     "X-Context-Properties"  : "eyJsb2NhdGlvbiI6IlJlZ2lzdGVyIn0=",
     "Accept-Language"       : "en-US",
     "sec-ch-ua-mobile"      : "?0",
-    "User-Agent"            :user_agent.generate_user_agent(),
+    "User-Agent"            : user_agent.generate_user_agent(),
     "Authorization"         : "undefined",
     "Accept"                : "*/*",
     "Sec-Fetch-Site"        : "same-origin",
