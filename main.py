@@ -26,19 +26,6 @@ def __get__fingerprint():
   return finger_res.json()['fingerprint']
 
 
-def __base__cookies():
- return {
-    '_ga': 'GA1.2.1645297267.1663096812',
-    '__sdcfduid': '6c42ef4a33cc11edb2bece37fb794cfc0f64a156cdd326c13b0aebad69b31617bc6fe067e75fa194f2bb4744a77d0e86',
-    '_gcl_au': '1.1.59655693.1663120675',
-    '_fbp': 'fb.1.1663273168922.931255472',
-    '__stripe_mid': 'b6f7dd68-864e-4ed9-93ad-778b134513d326ad41',
-    '__cfruid': '71cf2e478e9f5b17bcf246709a09d324b124b800-1666118278',
-    'locale': 'en-US',
-    'OptanonConsent': 'isIABGlobal=false&datestamp=Tue+Oct+18+2022+15%3A10%3A27+GMT-0400+(Eastern+Daylight+Time)&version=6.33.0&hosts=&landingPath=NotLandingPage&groups=C0001%3A1%2CC0002%3A1%2CC0003%3A1&AwaitingReconsent=false',
-    '__cf_bm': 'GJiNgaUsCbTitbMlKeRySCgvYIZ8w3nsJ33RXTt4SAY-1666120228-0-ATA0T27WXNbgERRP358V7/3vvkEsdGsfSgbEMd/OyDoZ/dlMEAIzVNe3s3z6l3YZuS+7OckpuBiqC44arcEJ3W9vmt9vER9euKv8bCWGxYIKEwBeEzumgq0mns2WMJk3lA==',
-    '_gid': 'GA1.2.635771753.1666120228',
-  }
 
 def __base__headers():
  return {
@@ -77,7 +64,6 @@ def __check__email():
  
    res          = session.post(
         'https://discord.com/api/v9/auth/forgot', 
-        cookies = __base__cookies(),
         headers = __base__headers(),
         json    = payload
    )
