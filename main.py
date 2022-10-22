@@ -3,8 +3,6 @@ from colorama import Fore
 
 base_email = open("combos.txt", "r").read().splitlines()
 
-
-
 def __get__fingerprint():
   headers = {
     "Host"                  : "discord.com",
@@ -79,13 +77,13 @@ def __check__email():
  
    res          = session.post(
         'https://discord.com/api/v9/auth/forgot', 
-        cookies=__base__cookies(),
-        headers=__base__headers(),
-        json=payload
+        cookies = __base__cookies(),
+        headers = __base__headers(),
+        json    = payload
    )
    if 'captcha-required' in res.text:
      print('{}>> {} :: Unregistered :: Discord Email Checker'.format(Fore.RED, email)); open('discord_unreg.txt', 'a').write(f'{email}\n')
-   if res.status_code == 20:
+   if res.status_code == 204:
      print('{}>> {} :: Registered :: Discord Email Checker'.format(Fore.GREEN, email)); open('discord_reg.txt', 'a').write(f'{email}\n')
 
  except Exception:
