@@ -55,7 +55,7 @@ def __check__email():
  try:
   with requests.Session() as session:
    base_email2  = random.choice(base_email)
-   email = base_email2.split(':')[0]
+   email        = base_email2.split(':')[0]
  
    payload      = {
         'login': email,
